@@ -1,25 +1,25 @@
 Junar-compatible webservice
 ==========================
 
-API REST completa para enviar los datos de tu base hasta Junar de modo simple y seguro
+Full API REST to communicate your database with the Junar platform
 
-**Instrucciones**
+**Steps**
 
-0.- Coloque el codigo en cualquier directorio de sitio web actual.
-Si conoce como hacerlo crear el subdominio "api" o "data", es una buena idea tambien
+0.- Put this code on any directory of you server.
+If you know how create a subdomain, use "api" or "data" as subdomain.
 
-1.- Configure su conexion a base de datos en el archivo
+1.- Configure your connection on the database file
 	/junar/application/config/database.php 
-	*(como copia de /junar/application/config/database.sample.php)*
+	*(as copy of /junar/application/config/database.sample.php)*
 
-2.- Revise el controlador principal para insertar alguna consulta a su base de datos y comenzar a usar el API
+2.- Check the main controller to insert some query to the database and start using this API
 	/junar/application/controller/api.php
 
-3.- Publique su primer webservice en Junar
-Necesitará los parámetros:
+3.- Publish your first webservice in Junar (one for each API function)
+You'll need these parameters:
 
 **Endpoint** 
-data.tuweb.com/index.php/api/NOMBRE_FUNCION/PARAMS (uno por cada funcion del API)
+data.yoursite.com/index.php/api/FUNCTION_NAME/PARAMS 
 
 **Webservice type** 
 REST/JSON
@@ -30,30 +30,28 @@ $.headers
 **Path to data** 
 $.data
 
-Si no requiere mecanismos de seguridad mas complejos el proceso esta listo y junar puede comenzar a consumir sus recuersos.
+If you do not require security you are ready to publish data on Junar.
 
-
-Opcionales
+Other options
 ==========
-.- Si desea mejorar us URL transforme el arcivo *.htaccess.ifneeded* en *.htaccess* y aplique los cambios que considere necesarios.
-.- Puede exponer al público una página de presentacion predeterminada en /junar/application/view/api_home.php. 
-Si ademas de junar expondrá esta api al público es una buena idea colocar aqui un indice de los datos que libera y algun instructivo de uso.
+.- If you want to improve your URLa copy the *.htaccess.ifneeded * in *. htaccess * and apply the necessary changes.
+.- You can expose a home page by changing the file /junar/application/view/api_home.php 
+There is a good idea to place here an index of the data resources and some tutorials.
 
-
-Aspectos técnicos
+Technical resources
 =================
-Basado en Codeigniter
-Incluye librería rest-server[0] 
+We use Codeigniter
+We include a rest-server library[0] 
 
-**Requisitos**
+**Requirements**
 PHP 5.3
-Apache 2.2 (se puede adaptar a otros)
-Una base de datos
+Apache 2.2 (not mandatory)
+A database
 
-**Bases de datos**
-Compatible con los mismos motores de bases de datos que incluye Codeigniter
-MySql (testeado)
-Oracle (testeado)
+**Compatible engine databases**
+Compatible as Codeigniter
+MySql (tested)
+Oracle (tested)
 MS SQL
 Postgres
 SQLite

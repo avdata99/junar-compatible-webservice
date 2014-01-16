@@ -47,7 +47,7 @@ $config['enable_emulate_request'] = TRUE;
 |	E.g: My Secret REST API
 |
 */
-$config['rest_realm'] = 'REST API CORMUP';
+$config['rest_realm'] = 'REST API JUNAR';
 
 /*
 |--------------------------------------------------------------------------
@@ -59,7 +59,7 @@ $config['rest_realm'] = 'REST API CORMUP';
 |	'' = no login required, 'basic' = unsecure login, 'digest' = more secure login
 |
 */
-$config['rest_auth'] = false;
+$config['rest_auth'] = "";// false;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,7 +71,7 @@ $config['rest_auth'] = false;
 | '' = use config based users, 'ldap' = use LDAP authencation
 |
 */
-$config['auth_source'] = 'ldap';
+$config['auth_source'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -177,7 +177,7 @@ $config['rest_ip_blacklist'] = '';
 |	'default'
 |
 */
-$config['rest_database_group'] = 'rest';
+$config['rest_database_group'] = "";// 'rest';
 
 /*
 |--------------------------------------------------------------------------
@@ -213,7 +213,7 @@ $config['rest_keys_table'] = 'keys';
 	) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 |
 */
-$config['rest_enable_keys'] = TRUE;
+$config['rest_enable_keys'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------

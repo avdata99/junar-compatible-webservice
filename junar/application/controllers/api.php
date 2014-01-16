@@ -22,7 +22,7 @@ class Api extends REST_Controller {
         $this->response($res);
         }    
        
-    public function getDom()
+    public function getDom_get()
         {
         $q = "select * from dominios limit 5";
         $res = $this->resultToJunar($q);
@@ -42,7 +42,9 @@ class Api extends REST_Controller {
     private function resultToJunar($q)
         {
         $res = new stdClass();
-        $data->loadDB = $this->load->database();
+        $data = new stdClass();
+        
+        $this->load->database();
         $query = $this->db->query($q);
         if ($query)
             {

@@ -17,10 +17,19 @@ Si conoce como hacerlo crear el subdominio "api" o "data", es una buena idea tam
 
 3.- Publique su primer webservice en Junar
 Necesitará los parámetros:
-**Endpoint:** data.tuweb.com/index.php/api/NOMBRE_FUNCION/PARAMS (uno por cada funcion del API)
-**Webservice type: ** REST/JSON
-**Path to headers: ** $.headers
-**Path to data: ** $.data
+
+**Endpoint** 
+data.tuweb.com/index.php/api/NOMBRE_FUNCION/PARAMS (uno por cada funcion del API)
+
+**Webservice type** 
+REST/JSON
+
+**Path to headers** 
+$.headers
+
+**Path to data** 
+$.data
+
 Si no requiere mecanismos de seguridad mas complejos el proceso esta listo y junar puede comenzar a consumir sus recuersos.
 
 

@@ -4,31 +4,56 @@ require(APPPATH.'libraries/REST_Controller.php');
 /**
  * Main Controller
  * You could use at 
- * http://junar.youwebsite.com/api/FUNCTION_NAME
+ * http://junar.youwebsite.com/index.php/api/FUNCTION_NAME
  * OR
- * http://youwebsite.com/junar/api/FUNCTION_NAME
+ * http://youwebsite.com/junar/index.php/api/FUNCTION_NAME
+ * (you could remove "index.php" using .htaccess)
  */
 class Api extends REST_Controller {
     
     /**
-     * test function
-     * http://api.youwebsite.com/api
-     * http://portal.cormup.cl/wserv/index.php/api/catalogo/?token=jUnAr000TOKEN0099
-     */    
+     * Test function. ALWAYS use "_get" sufix in the function name definition
+     * Read more about REST library at https://github.com/avdata99/codeigniter-restserver
+     * 
+     * Just define a query and send to resultToJunar function, then send the "response"
+     * 
+     * You could use "format" parameter as /format/json or /format/xml
+     * For example
+     * http://junar.youwebsite.com/api/miPrimeraFuncion/format/xml
+     * http://junar.youwebsite.com/api/miPrimeraFuncion/format/json
+     * (the url NEVER must include the"_get" sufix)
+     */
     public function miPrimeraFuncion_get()
         {
         $q = "select * from anyTable";
         $res = $this->resultToJunar($q);
         $this->response($res);
-        }    
-       
-    public function getDom_get()
+        }
+        
+        
+    /**
+     * test whit params
+     * Examples
+     * http://junar.youwebsite.com/api/abotherFunction/table/productos
+     * http://junar.youwebsite.com/api/abotherFunction/table/productos/order/id desc
+     * http://junar.youwebsite.com/api/abotherFunction/table/productos/limit/6
+     * http://junar.youwebsite.com/api/abotherFunction/table/productos/order/id/limit/10/format/xml
+     */    
+    public function anotherFunction_get()
         {
-        $q = "select * from dominios limit 5";
+        $table = $this->get('table');
+        $limit = ($this->get('limit')) ? " limit " . $this->get('limit'): "";
+        $order = ($this->get('order')) ? " order by " . $this->get('order') : "";
+        $q = "select * from $table $order $limit";
         $res = $this->resultToJunar($q);
         $this->response($res);
         }
        
+        
+        
+        
+        
+        
         
     /**
      * ---------DO NOT CHANGE-------------------

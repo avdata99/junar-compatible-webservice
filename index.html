@@ -39,8 +39,8 @@
 <h3>
 <a name="instrucciones" class="anchor" href="#instrucciones"><span class="octicon octicon-link"></span></a>Instrucciones</h3>
 
-<p>0.- Coloque el codigo en cualquier directorio de sitio web actual.
-Si conoce como hacerlo crear el subdominio "api" o "data", es una buena idea tambien</p>
+<p>0.- Coloque el código en cualquier directorio de sitio web actual.
+Si conoce como crear el subdominio "api" o "data", es una buena idea también</p>
 
 <p>1.- Configure su conexion a base de datos en el archivo
     /junar/application/config/database.php 
@@ -49,8 +49,9 @@ Si conoce como hacerlo crear el subdominio "api" o "data", es una buena idea tam
 <p>2.- Revise el controlador principal para insertar alguna consulta a su base de datos y comenzar a usar el API
     /junar/application/controller/api.php</p>
 
-<p>3.- Publique su primer webservice en Junar
-Necesitará los parámetros:</p>
+<p>3.- Publique su primer webservice en Junar.</p>
+
+<p>Necesitará los parámetros:</p>
 
 <p><strong>Endpoint</strong>
 data.tuweb.com/index.php/api/NOMBRE_FUNCION/PARAMS (uno por cada funcion del API)</p>
@@ -69,8 +70,9 @@ $.data</p>
 <h3>
 <a name="opcionales" class="anchor" href="#opcionales"><span class="octicon octicon-link"></span></a>Opcionales</h3>
 
-<p>.- Si desea mejorar us URL transforme el arcivo <em>.htaccess.ifneeded</em> en <em>.htaccess</em> y aplique los cambios que considere necesarios.
-.- Puede exponer al público una página de presentacion predeterminada en /junar/application/view/api_home.php. 
+<p>.- Si desea mejorar us URL transforme el arcivo <em>.htaccess.ifneeded</em> en <em>.htaccess</em> y aplique los cambios que considere necesarios.</p>
+
+<p>.- Puede exponer al público una página de presentacion predeterminada en /junar/application/view/api_home.php. 
 Si ademas de junar expondrá esta api al público es una buena idea colocar aqui un indice de los datos que libera y algun instructivo de uso.</p>
 
 <h3>
@@ -79,19 +81,27 @@ Si ademas de junar expondrá esta api al público es una buena idea colocar aqui
 <p>Basado en Codeigniter
 Incluye librería rest-server[0] </p>
 
-<p><strong>Requisitos</strong>
-PHP 5.3
-Apache 2.2 (se puede adaptar a otros)
+<p><strong>Requisitos</strong></p>
+
+<p>PHP 5.3</p>
+
+<p>Apache 2.2 (se puede adaptar a otros)
 Una base de datos</p>
 
 <p><strong>Bases de datos</strong>
-Compatible con los mismos motores de bases de datos que incluye Codeigniter
-MySql (testeado)
-Oracle (testeado)
-MS SQL
-Postgres
-SQLite
-ODBC.</p>
+Compatible con los mismos motores de bases de datos que incluye Codeigniter.</p>
+
+<p>MySql (testeado)</p>
+
+<p>Oracle (testeado)</p>
+
+<p>MS SQL</p>
+
+<p>Postgres</p>
+
+<p>SQLite</p>
+
+<p>ODBC.</p>
 
 <hr><p>[0] <a href="https://github.com/avdata99/codeigniter-restserver">https://github.com/avdata99/codeigniter-restserver</a></p>
         </section>

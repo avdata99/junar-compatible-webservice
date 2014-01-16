@@ -34,27 +34,25 @@
           <h1>
 <a name="junar-compatible-webservice" class="anchor" href="#junar-compatible-webservice"><span class="octicon octicon-link"></span></a>Junar-compatible webservice</h1>
 
-<p>API REST completa para enviar los datos de tu base hasta Junar de modo simple y seguro</p>
+<p>Full API REST to communicate your database with the Junar platform</p>
 
-<h3>
-<a name="instrucciones" class="anchor" href="#instrucciones"><span class="octicon octicon-link"></span></a>Instrucciones</h3>
+<p><strong>Steps</strong></p>
 
-<p>0.- Coloque el código en cualquier directorio de sitio web actual.
-Si conoce como crear el subdominio "api" o "data", es una buena idea también</p>
+<p>0.- Put this code on any directory of you server.
+If you know how create a subdomain, use "api" or "data" as subdomain.</p>
 
-<p>1.- Configure su conexion a base de datos en el archivo
+<p>1.- Configure your connection on the database file
     /junar/application/config/database.php 
-    <em>(como copia de /junar/application/config/database.sample.php)</em></p>
+    <em>(as copy of /junar/application/config/database.sample.php)</em></p>
 
-<p>2.- Revise el controlador principal para insertar alguna consulta a su base de datos y comenzar a usar el API
+<p>2.- Check the main controller to insert some query to the database and start using this API
     /junar/application/controller/api.php</p>
 
-<p>3.- Publique su primer webservice en Junar.</p>
+<p>3.- Publish your first webservice in Junar (one for each API function)
+You'll need these parameters:</p>
 
-<p>Necesitará los parámetros:</p>
-
-<p><strong>Endpoint</strong>
-data.tuweb.com/index.php/api/NOMBRE_FUNCION/PARAMS (uno por cada funcion del API)</p>
+<p><strong>Endpoint</strong> 
+data.yoursite.com/index.php/api/FUNCTION_NAME/PARAMS </p>
 
 <p><strong>Webservice type</strong> 
 REST/JSON</p>
@@ -65,43 +63,34 @@ $.headers</p>
 <p><strong>Path to data</strong> 
 $.data</p>
 
-<p>Si no requiere mecanismos de seguridad mas complejos el proceso esta listo y junar puede comenzar a consumir sus recuersos.</p>
+<p>If you do not require security you are ready to publish data on Junar.</p>
 
-<h3>
-<a name="opcionales" class="anchor" href="#opcionales"><span class="octicon octicon-link"></span></a>Opcionales</h3>
+<h1>
+<a name="other-options" class="anchor" href="#other-options"><span class="octicon octicon-link"></span></a>Other options</h1>
 
-<p>.- Si desea mejorar us URL transforme el arcivo <em>.htaccess.ifneeded</em> en <em>.htaccess</em> y aplique los cambios que considere necesarios.</p>
+<p>.- If you want to improve your URLa copy the *.htaccess.ifneeded * in *. htaccess * and apply the necessary changes.
+.- You can expose a home page by changing the file /junar/application/view/api_home.php 
+There is a good idea to place here an index of the data resources and some tutorials.</p>
 
-<p>.- Puede exponer al público una página de presentacion predeterminada en /junar/application/view/api_home.php. 
-Si ademas de junar expondrá esta api al público es una buena idea colocar aqui un indice de los datos que libera y algun instructivo de uso.</p>
+<h1>
+<a name="technical-resources" class="anchor" href="#technical-resources"><span class="octicon octicon-link"></span></a>Technical resources</h1>
 
-<h3>
-<a name="aspectos-t%C3%A9cnicos" class="anchor" href="#aspectos-t%C3%A9cnicos"><span class="octicon octicon-link"></span></a>Aspectos técnicos</h3>
+<p>We use Codeigniter
+We include a rest-server library[0] </p>
 
-<p>Basado en Codeigniter
-Incluye librería rest-server[0] </p>
+<p><strong>Requirements</strong>
+PHP 5.3
+Apache 2.2 (not mandatory)
+A database</p>
 
-<p><strong>Requisitos</strong></p>
-
-<p>PHP 5.3</p>
-
-<p>Apache 2.2 (se puede adaptar a otros)
-Una base de datos</p>
-
-<p><strong>Bases de datos</strong>
-Compatible con los mismos motores de bases de datos que incluye Codeigniter.</p>
-
-<p>MySql (testeado)</p>
-
-<p>Oracle (testeado)</p>
-
-<p>MS SQL</p>
-
-<p>Postgres</p>
-
-<p>SQLite</p>
-
-<p>ODBC.</p>
+<p><strong>Compatible engine databases</strong>
+Compatible as Codeigniter
+MySql (tested)
+Oracle (tested)
+MS SQL
+Postgres
+SQLite
+ODBC.</p>
 
 <hr><p>[0] <a href="https://github.com/avdata99/codeigniter-restserver">https://github.com/avdata99/codeigniter-restserver</a></p>
         </section>

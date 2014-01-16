@@ -1,5 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+
+/**
+ * Test an OCI connection
+ * Ensure you php-oracle classes are installed and working fine
+ */
 class Testoci extends CI_Controller {
     
     public function index()

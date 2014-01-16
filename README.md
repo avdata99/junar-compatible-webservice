@@ -9,6 +9,8 @@ API REST completa para enviar los datos de tu base hasta Junar de modo simple y 
 	/api/application/config/database.php 
 	*(como copia de /api/application/config/database.sample.php)*
 
+2.- Puede opcionalmente exponer al público una página de presentacion predeterminada en /api/application/view/api_home.php
+
 
 **Aspectos técnicos**
 Basado en Codeigniter
@@ -22,7 +24,10 @@ Apache 2.2 (se puede adaptar a otros)
 Compatible con los mismos motores de bases de datos que incluye Codeigniter
 MySql
 Oracle
-
+MS SQL
+Postgres
+SQLite
+ODBC.
 
 
 [0] https://github.com/avdata99/codeigniter-restserver

@@ -15,7 +15,7 @@
 |
 */
 
-$config['base_url'] = (ENVIRONMENT == 'development') ? 'http://localhost/dev/HA/junar/portal.cormup.cl/wserv/' : "" ;
+$config['base_url'] = (ENVIRONMENT == 'development') ? 'http://localhost/YOU/FOLDERS/PATH/TO/TEST/' : "" ;
 
 /*
 |--------------------------------------------------------------------------

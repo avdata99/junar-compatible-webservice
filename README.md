@@ -3,6 +3,11 @@ Junar-compatible webservice
 
 API REST completa para enviar los datos de tu base hasta Junar de modo simple y seguro
 
+*Instrucciones*
+
+1.- Configure su conexion a base de datos en el archivo
+    /api/application/config/database.php 
+    (como copia de /api/application/config/database.sample.php)
 
 
 *Aspectos técnicos*

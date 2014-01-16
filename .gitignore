@@ -9,3 +9,5 @@
 /api/application/logs/*
 !/api/application/logs/index.html
 !/api/application/logs/.htaccess
+
+/api/application/config/database.php

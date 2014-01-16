@@ -13,7 +13,7 @@ Si conoce como hacerlo crear el subdominio "api" o "data", es una buena idea tam
 	*(como copia de /junar/application/config/database.sample.php)*
 
 2.- Revise el controlador principal para insertar alguna consulta a su base de datos y comenzar a usar el API
-    /junar/application/controller/api.php
+	/junar/application/controller/api.php
 
 3.- Publique su primer webservice en Junar
 Necesitará los parámetros:
@@ -51,4 +51,5 @@ SQLite
 ODBC.
 
 
+--------------------------------------------------------
 [0] https://github.com/avdata99/codeigniter-restserver

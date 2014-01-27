@@ -38,6 +38,10 @@ class Api extends REST_Controller {
      * http://junar.youwebsite.com/api/abotherFunction/table/productos/order/id desc
      * http://junar.youwebsite.com/api/abotherFunction/table/productos/limit/6
      * http://junar.youwebsite.com/api/abotherFunction/table/productos/order/id/limit/10/format/xml
+     * 
+     * If you want to use parameters like ?param1=value1&param2=value2 enable "enable_query_strings"
+     * on the config file (application/config/config.php)
+     * If you need to allow more characters on the URL redefine the "permitted_uri_chars" configuration value
      */    
     public function anotherFunction_get()
         {
